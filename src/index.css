@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Bai+Jamjuree:wght@400;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: 'Bai Jamjuree', 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  color: rgb(31 41 55);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-medium px-4 py-2 rounded-xl;
+    transition: all 200ms ease;
+  }
+
+  .btn-primary {
+    background-color: #0FB5C4;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #0AA0AC;
+  }
+
+  .btn-outline {
+    @apply border border-gray-300 text-gray-700 hover:bg-gray-50;
+  }
+
+  .card {
+    @apply rounded-2xl border border-gray-100 shadow-sm bg-white;
+  }
+
+  .card-body {
+    @apply p-4;
+  }
+
+  .kicker {
+    @apply text-xs uppercase tracking-wider text-gray-500;
+  }
+}
+
+.section {
+  @apply w-full max-w-6xl mx-auto px-6 py-16 md:py-24;
+}
+
+/* Tipografía premium */
+h1 {
+  @apply text-4xl md:text-6xl font-semibold;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl font-semibold;
+}
+
+p {
+  @apply text-base md:text-lg leading-7;
+}
+
+/* Animaciones de reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Parallax mobile fallback */
+@media (max-width: 768px) {
+  .hero-bg {
+    background-attachment: scroll !important;
+  }
+}
+
+/* Microinteracciones y transiciones sutiles */
+.smooth-transition {
+  transition: opacity 200ms ease, transform 200ms ease, background-color 200ms ease, border-color 200ms ease, color 200ms ease, box-shadow 250ms ease;
+}
+
+/* Animaciones sutiles de entrada */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mejores focus rings */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #0FB5C4;
+  outline-offset: 2px;
+}
+
+/* Smooth hover en imágenes */
+.card img,
+.hero-bg {
+  transition: transform 300ms ease, filter 200ms ease;
+}
+
+/* Botones con mejor feedback */
+.btn {
+  transform: translateY(0);
+  transition: all 200ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+  transition: all 100ms ease;
+}
+
+/* Transiciones específicas para elementos interactivos */
+.card,
+.btn,
+button,
+a {
+  transition: box-shadow 200ms ease, transform 200ms ease, background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
