@@ -1,4 +1,4 @@
-import logoUrl from "../../assets/logo-cyan.svg";
+import logoUrl from "../../assets/Cielo_Americano_Oscar_logo.svg";
 import { siteConfig } from "../../config/siteConfig";
 
 type LogoProps = {

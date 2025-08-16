@@ -4,7 +4,7 @@ import { whatsappQuoteLink } from "../config/siteConfig";
 export default function DesktopCTA() {
     return (
         <div className="hidden md:block w-full max-w-sm mx-auto">
-            <div className="card p-6 bg-gradient-to-br from-brand-50 to-white border-brand-100 text-center">
+            <div className="card p-6 bg-gradient-to-br from-background-secondary to-white border-primary-100 text-center">
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">
                     ¿Necesitas una cotización?
                 </h3>

@@ -1,4 +1,4 @@
-import { whatsappQuoteLink } from "../config/siteConfig";
+import { siteConfig, whatsappQuoteLink } from "../config/siteConfig";
 
 export default function Hero() {
     return (
@@ -7,34 +7,37 @@ export default function Hero() {
             <div
                 className="absolute inset-0 bg-center bg-cover"
                 style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')",
+                    backgroundImage: "url('/src/assets/office-ceilings-Melbourne.png')",
                     backgroundAttachment: typeof window !== 'undefined' && window.innerWidth >= 768 ? "fixed" : "scroll",
                 }}
             />
 
-            {/* Overlay para legibilidad */}
-            <div className="absolute inset-0 bg-black/35" />
+            {/* Overlay mejorado para legibilidad */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60" />
 
-            {/* Contenido centrado */}
+            {/* Contenido centrado con mejor contraste */}
             <div className="relative z-10 flex items-center justify-center min-h-[75vh] md:min-h-[85vh]">
                 <div className="container text-center text-white reveal">
-                    <div className="max-w-4xl mx-auto">
-                        <p className="kicker text-white/80 mb-4">CIELOS AMERICANOS</p>
-                        <h1 className="leading-tight mb-6">
-                            Soluciones premium para tu oficina
+                    {/* Contenedor con backdrop blur para mejor legibilidad */}
+                    <div className="max-w-4xl mx-auto hero-content bg-black/20 rounded-3xl p-8 md:p-12 border border-white/10">
+                        <p className="kicker text-white/95 mb-4 font-semibold tracking-wider">
+                            {siteConfig.hero.kicker}
+                        </p>
+                        <h1 className="hero-title leading-tight mb-6 text-white">
+                            {siteConfig.hero.title}
                         </h1>
-                        <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-8 font-light">
-                            Mobiliario de calidad superior con instalación profesional y atención inmediata por WhatsApp
+                        <p className="hero-subtitle text-xl md:text-2xl text-white/95 max-w-2xl mx-auto mb-8 font-light">
+                            {siteConfig.hero.subtitle}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="/productos" className="btn btn-primary text-lg px-8 py-4">
-                                Explorar productos
+                            <a href="/productos" className="btn btn-primary text-lg px-8 py-4 shadow-lg">
+                                {siteConfig.hero.ctaPrimary}
                             </a>
                             <a
                                 href={whatsappQuoteLink()}
-                                className="btn bg-white/10 border border-white/30 text-white hover:bg-white/20 transition text-lg px-8 py-4"
+                                className="btn bg-white/20 border border-white/50 text-white hover:bg-white/30 backdrop-blur-sm transition text-lg px-8 py-4 shadow-lg"
                             >
-                                Cotizar ahora
+                                {siteConfig.hero.ctaSecondary}
                             </a>
                         </div>
                     </div>

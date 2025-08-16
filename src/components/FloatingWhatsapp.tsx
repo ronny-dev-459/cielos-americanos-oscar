@@ -3,11 +3,11 @@ import { whatsappQuoteLink } from "../config/siteConfig";
 export default function FloatingWhatsapp() {
     return (
         <a
-            href={whatsappQuoteLink()}
+            href={whatsappQuoteLink("Hola, quiero información sobre cielos americanos")}
             target="_blank"
             rel="noreferrer"
             aria-label="Abrir WhatsApp para cotizar"
-            className="fixed bottom-5 right-5 h-12 w-12 rounded-full flex items-center justify-center shadow-lg text-white focus:outline-none z-50 transition-all duration-200 hover:scale-110"
+            className="fixed bottom-6 right-6 h-14 w-14 rounded-full flex items-center justify-center shadow-2xl text-white focus:outline-none z-50 transition-all duration-300 hover:scale-110 animate-pulse"
             style={{ backgroundColor: '#25D366' }}
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#22BF5D'}
             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#25D366'}

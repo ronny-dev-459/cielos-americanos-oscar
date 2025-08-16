@@ -1,12 +1,22 @@
 import CategoryCard from "../components/CategoryCard";
 import LogoCloud from "../components/LogoCloud";
-import Hero from "../components/Hero";
+import HeroCarousel from "../components/hero/HeroCarousel";
 import BenefitsSection from "../components/BenefitsSection";
+import ProductCard from "../components/ProductCard";
 import FeaturedCarousel from "../components/carousels/FeaturedCarousel";
 import FeatureSplit from "../components/FeatureSplit";
+import CategoriesGrid from "../components/CategoriesGrid";
+import CompanyBlock from "../components/CompanyBlock";
+import HomeSummary from "../components/HomeSummary";
 
 import { products, categoriesWithImages } from "../data/products";
-import { whatsappQuoteLink } from "../config/siteConfig";
+import { siteConfig, whatsappQuoteLink } from "../config/siteConfig";
+
+const heroSlides = [
+    { src: "/src/assets/hero/hero-1.png", alt: "Cielo modular en oficina" },
+    { src: "/src/assets/hero/hero-2.jpg", alt: "Tejas de techo modulares" },
+    { src: "/src/assets/hero/hero-3.jpg", alt: "Cielos americanos profesionales" },
+];
 
 export default function Home() {
     const destacados = products.slice(0, 8);
@@ -17,71 +27,102 @@ export default function Home() {
 
     return (
         <main className="w-full">
-            {/* Hero con parallax mejorado */}
-            <Hero />
-
-            {/* Storytelling por bloques */}
-            <FeatureSplit
-                kicker="CALIDAD SUPERIOR"
-                title="Materiales que se sienten premium"
-                desc="Cada pieza está fabricada con materiales de primera calidad. Maderas nobles, aceros resistentes y acabados que perduran en el tiempo. La inversión en mobiliario de oficina debe durar años, no meses."
-                imgSrc="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                reverse={false}
-            />
-
-            <FeatureSplit
-                kicker="INSTALACIÓN PROFESIONAL"
-                title="Nuestro equipo se encarga de todo"
-                desc="No te preocupes por el montaje. Nuestro equipo técnico especializado se encarga de la instalación completa, pruebas de funcionamiento y ajustes finales. Garantía de instalación incluida."
-                imgSrc="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                reverse={true}
-            />
-
-            <FeatureSplit
-                kicker="ATENCIÓN INMEDIATA"
-                title="Respuesta por WhatsApp en minutos"
-                desc="Olvídate de esperas. Nuestro equipo comercial te atiende por WhatsApp en tiempo real. Cotizaciones al instante, asesoramiento personalizado y seguimiento hasta la entrega."
-                imgSrc="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                reverse={false}
-            />
-
-            {/* Productos destacados */}
-            <section className="section">
-                <div className="flex items-end justify-between mb-4">
-                    <h2 className="reveal">Productos destacados</h2>
-                    <a href="/productos" className="text-brand-600 hover:underline text-sm font-medium">
-                        Ver todo →
-                    </a>
+            {/* HERO SLIDER */}
+            <HeroCarousel slides={heroSlides}>
+                <div className="relative z-10 flex items-center justify-center min-h-[75vh] md:min-h-[85vh]">
+                    <div className="container text-center text-white reveal">
+                        {/* Contenedor con backdrop blur para mejor legibilidad */}
+                        <div className="max-w-4xl mx-auto hero-content bg-black/20 rounded-3xl p-8 md:p-12 border border-white/10">
+                            <p className="kicker text-white/95 mb-4 font-semibold tracking-wider">
+                                {siteConfig.hero.kicker}
+                            </p>
+                            <h1 className="hero-title leading-tight mb-6 text-white">
+                                {siteConfig.hero.title}
+                            </h1>
+                            <p className="hero-subtitle text-xl md:text-2xl text-white/95 max-w-2xl mx-auto mb-8 font-light">
+                                {siteConfig.hero.subtitle}
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="/productos" className="btn btn-primary text-lg px-8 py-4 shadow-lg">
+                                    {siteConfig.hero.ctaPrimary}
+                                </a>
+                                <a
+                                    href={whatsappQuoteLink()}
+                                    className="btn bg-white/10 border border-white/50 text-white hover:bg-white/30 backdrop-blur-sm transition text-lg px-8 py-4 shadow-lg"
+                                >
+                                    {siteConfig.hero.ctaSecondary}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="reveal">
-                    <FeaturedCarousel items={destacados} delay={4000} />
-                </div>
-            </section>
+            </HeroCarousel>
 
-            {/* CTA section con fondo turquesa */}
-            <section className="bg-brand-600 text-white py-16">
-                <div className="container text-center">
-                    <h2 className="text-3xl font-semibold text-white mb-4">¿Necesitas una cotización personalizada?</h2>
-                    <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
-                        Nuestro equipo está listo para asesorarte. Respuesta garantizada por WhatsApp en minutos.
-                    </p>
-                    <a
-                        href={whatsappQuoteLink()}
-                        className="btn bg-white text-brand-600 hover:bg-gray-50 text-lg px-8 py-4 font-semibold inline-block"
-                    >
-                        💬 Cotizar por WhatsApp
-                    </a>
-                    <div className="text-sm text-white/80 mt-6">
-                        <p>📱 Respuesta inmediata • ⏰ Lun-Vie 9:00-18:00</p>
+            {/* Bloque de Categorías - Fondo turquesa claro */}
+            <CategoriesGrid />
+
+            {/* Bloque Nuestra empresa - Fondo blanco */}
+            <CompanyBlock />
+
+            {/* Storytelling por bloques - Fondos alternados */}
+            {siteConfig.features.map((feature, index) => {
+                let sectionClass = "py-16";
+                if (index === 0) sectionClass += " bg-background-secondary"; // Turquesa claro
+                else if (index === 1) sectionClass += " bg-white"; // Blanco
+                else sectionClass += " bg-background-dark"; // Gris muy claro
+
+                return (
+                    <section key={index} className={sectionClass}>
+                        <FeatureSplit
+                            kicker={feature.kicker}
+                            title={feature.title}
+                            desc={feature.description}
+                            imgSrc={feature.image}
+                            reverse={feature.reverse}
+                        />
+                    </section>
+                );
+            })}
+
+            {/* Productos destacados - Fondo blanco con borde */}
+            <section className="py-16 bg-white border-t border-gray-100">
+                <div className="section">
+                    <div className="flex items-end justify-between mb-4">
+                        <h2 className="reveal">{siteConfig.featuredProducts.title}</h2>
+                        <a href="/productos" className="text-primary-500 hover:underline text-sm font-medium">
+                            {siteConfig.featuredProducts.linkText}
+                        </a>
+                    </div>
+                    <div className="reveal">
+                        <FeaturedCarousel items={destacados} delay={4000} />
                     </div>
                 </div>
             </section>
 
-            {/* Social proof mejorado */}
-            <section className="bg-gradient-to-b from-gray-50 to-white">
+            {/* CTA section con fondo turquesa */}
+            <section className="bg-primary-500 text-white py-16">
+                <div className="container text-center">
+                    <h2 className="text-3xl font-semibold text-white mb-4">{siteConfig.cta.primary.title}</h2>
+                    <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
+                        {siteConfig.cta.primary.subtitle}
+                    </p>
+                    <a
+                        href={whatsappQuoteLink()}
+                        className="btn bg-white text-primary-500 hover:bg-gray-50 text-lg px-8 py-4 font-semibold inline-block"
+                    >
+                        {siteConfig.cta.primary.buttonText}
+                    </a>
+                    <div className="text-sm text-white/80 mt-6">
+                        <p>{siteConfig.cta.primary.footerText}</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Social proof mejorado - Fondo degradado */}
+            <section className="bg-gradient-to-b from-background-secondary to-white border-t border-primary-200">
                 <div className="section reveal text-center">
-                    <p className="kicker mb-3">MÁS DE 200 EMPRESAS CONFÍAN EN NOSOTROS</p>
-                    <h2 className="mb-8">Resultados que hablan por sí solos</h2>
+                    <p className="kicker mb-3">{siteConfig.socialProof.kicker}</p>
+                    <h2 className="mb-8">{siteConfig.socialProof.title}</h2>
                     <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center mb-12">
                         {logos.slice(0, 6).map((l, i) => (
                             <img
@@ -95,41 +136,47 @@ export default function Home() {
                     </div>
                     <div className="max-w-2xl mx-auto">
                         <p className="text-lg text-slate-600 italic">
-                            "La calidad del mobiliario superó nuestras expectativas. La instalación fue impecable y el servicio postventa excepcional."
+                            "{siteConfig.socialProof.testimonial.text}"
                         </p>
                         <p className="mt-3 text-sm text-slate-500">
-                            — María González, Gerente General, TechCorp
+                            — {siteConfig.socialProof.testimonial.author}, {siteConfig.socialProof.testimonial.position}, {siteConfig.socialProof.testimonial.company}
                         </p>
                     </div>
                 </div>
             </section>
 
             {/* CTA final premium */}
-            <section className="bg-gradient-to-br from-brand-600 to-brand-700 text-white">
+            <section className="bg-gradient-to-br from-primary-500 to-primary-700 text-white">
                 <div className="section text-center reveal">
-                    <h2 className="text-white mb-4">¿Listo para transformar tu oficina?</h2>
+                    <h2 className="text-white mb-4">{siteConfig.cta.final.title}</h2>
                     <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
-                        Obtén una cotización personalizada en minutos. Nuestro equipo está esperando tu mensaje.
+                        {siteConfig.cta.final.subtitle}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
                             href={whatsappQuoteLink()}
-                            className="btn bg-white text-brand-600 hover:bg-gray-50 text-lg px-8 py-4 font-semibold"
+                            className="btn bg-white text-primary-500 hover:bg-gray-50 text-lg px-8 py-4 font-semibold"
                         >
-                            Cotizar por WhatsApp
+                            {siteConfig.cta.final.buttonPrimary}
                         </a>
                         <a
                             href="/productos"
                             className="btn border-2 border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4"
                         >
-                            Ver catálogo
+                            {siteConfig.cta.final.buttonSecondary}
                         </a>
                     </div>
                     <p className="text-sm text-white/70 mt-6">
-                        Respuesta garantizada en menos de 30 minutos • Lun-Vie 9:00-18:00
+                        {siteConfig.cta.final.footerText}
                     </p>
                 </div>
             </section>
+
+            {/* Separador visual */}
+            <div className="h-4 bg-gradient-to-b from-primary-700 to-primary-600"></div>
+
+            {/* Pie de Home con resumen */}
+            <HomeSummary />
         </main>
     );
 }

@@ -40,9 +40,9 @@ export default function Products() {
                 <CategoryFilter categories={allCategories} value={category} onChange={setCategory} />
             </div>
 
-            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {paginated.map((p) => (
-                    <ProductCard key={p.id} image={p.image} name={p.name} category={p.category} description={p.description} />
+                    <ProductCard key={p.id} product={p} />
                 ))}
             </div>
 
@@ -52,7 +52,7 @@ export default function Products() {
                         <button
                             key={i}
                             onClick={() => setPage(i + 1)}
-                            className={`px-3 py-1 rounded-md border text-sm ${page === i + 1 ? "bg-cyan-600 text-white border-cyan-600" : "border-gray-300 hover:bg-gray-50"}`}
+                            className={`px-3 py-1 rounded-md border text-sm ${page === i + 1 ? "bg-primary-500 text-white border-primary-500" : "border-gray-300 hover:bg-gray-50"}`}
                             aria-current={page === i + 1 ? "page" : undefined}
                         >
                             {i + 1}

@@ -1,16 +1,14 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { whatsappQuoteLink } from "../config/siteConfig";
+import type { Product } from "../data/products";
 
 type Props = {
-    image: string;
-    name: string;
-    category: string;
-    description: string;
-    bullets?: string[];
-    badge?: string;
+    product: Product;
 };
 
-export default function ProductCard({ image, name, category, description, bullets, badge }: Props) {
+export default function ProductCard({ product }: Props) {
+    const { id, name, category, image, description, specs, tags, isService } = product;
+
     return (
         <article className="card h-full flex flex-col hover:shadow-md transition overflow-hidden group">
             <div className="relative">
@@ -22,26 +20,57 @@ export default function ProductCard({ image, name, category, description, bullet
                     width="600"
                     height="450"
                 />
-                {badge && (
-                    <span className="absolute top-3 left-3 text-xs bg-white/90 text-slate-700 rounded px-2 py-0.5 font-medium">
-                        {badge}
+                {(id !== name && !isService) && (
+                    <span className="absolute top-3 left-3 text-xs bg-primary-500 text-white rounded px-2 py-0.5 font-medium">
+                        {id}
+                    </span>
+                )}
+                {isService && (
+                    <span className="absolute top-3 left-3 text-xs bg-green-500 text-white rounded px-2 py-0.5 font-medium">
+                        SERVICIO
                     </span>
                 )}
             </div>
-            <div className="card-body flex flex-col gap-2 flex-1">
+            <div className="card-body flex flex-col gap-3 flex-1">
                 <span className="kicker">{category}</span>
                 <h3 className="text-lg font-semibold line-clamp-2">{name}</h3>
-                <p className="text-sm text-slate-600 flex-1 line-clamp-2">{description}</p>
-                {bullets && bullets.length > 0 && (
-                    <ul className="list-disc pl-5 text-sm text-gray-700 space-y-1">
-                        {bullets.slice(0, 2).map((b, i) => (
-                            <li key={i}>{b}</li>
-                        ))}
-                    </ul>
+                <p className="text-sm text-text-secondary flex-1">{description}</p>
+
+                {specs && specs.length > 0 && (
+                    <div className="text-xs text-text-light">
+                        <div className="font-medium text-text-secondary mb-1">Características:</div>
+                        <ul className="space-y-1">
+                            {specs.slice(0, 3).map((spec, i) => (
+                                <li key={i} className="flex items-start gap-2">
+                                    <div className="w-1 h-1 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <span>{spec}</span>
+                                </li>
+                            ))}
+                            {specs.length > 3 && (
+                                <li className="text-primary-500 font-medium">
+                                    +{specs.length - 3} características más
+                                </li>
+                            )}
+                        </ul>
+                    </div>
                 )}
+
+                {tags && tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1">
+                        {tags.slice(0, 3).map((tag, i) => (
+                            <span
+                                key={i}
+                                className="text-xs bg-background-secondary text-primary-600 px-2 py-1 rounded"
+                            >
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                )}
+
                 <a
                     className="btn btn-primary mt-auto w-full"
-                    href={whatsappQuoteLink(name)}
+                    href={whatsappQuoteLink(`${name} (${id})`)}
                     target="_blank"
                     rel="noreferrer"
                 >

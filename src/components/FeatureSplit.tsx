@@ -10,10 +10,10 @@ type Props = {
 
 export default function FeatureSplit({ kicker, title, desc, imgSrc, reverse = false }: Props) {
     return (
-        <section className="section reveal">
+        <div className="w-full max-w-6xl mx-auto px-6 py-16 md:py-24 reveal">
             <div className={`grid md:grid-cols-2 gap-10 lg:gap-16 items-center ${reverse ? "md:[&>div:first-child]:order-2" : ""}`}>
                 <div>
-                    <p className="kicker text-brand-600">{kicker}</p>
+                    <p className="kicker text-primary-500">{kicker}</p>
                     <h2 className="mt-2">{title}</h2>
                     <p className="mt-4 text-slate-600 max-w-prose">{desc}</p>
                     <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -39,6 +39,6 @@ export default function FeatureSplit({ kicker, title, desc, imgSrc, reverse = fa
                     />
                 </div>
             </div>
-        </section>
+        </div>
     );
 }
