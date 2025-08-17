@@ -14,17 +14,17 @@ export const categories = ["Cielos Modulares", "Perfilería", "Luminaria"];
 export const categoriesWithImages = [
   {
     name: "Cielos Modulares",
-    image: "/src/assets/products/CIELOS MODULARES/3.2  CÓDIGO CAOP01 Palmeta Metálica Acustiplak Acero Perforada 2x2 Blanca  Y GRIS Rebaje 916 Y 1516.jpg",
+    image: "/assets/products/CIELOS MODULARES/3.2_CODIGO_CAOP01_Palmeta_Metalica_Acustiplak.jpg",
     alt: "Palmetas metálicas y fibra mineral para cielos americanos"
   },
   {
     name: "Perfilería", 
-    image: "/src/assets/products/perfileria/4.1 CODIGO CAOPER01 Principal 1516 o 916 espesor 0,4mm.jpg",
+    image: "/assets/products/perfileria/4.1 CODIGO CAOPER01 Principal 1516 o 916 espesor 0,4mm.jpg",
     alt: "Perfiles principales y secundarios para estructura"
   },
   {
     name: "Luminaria",
-    image: "/src/assets/products/LUMINARIA/5.1 CODIGO CAOLUM01 Panel Led Back Light FOTO 1 DE.jpg",
+    image: "/assets/products/LUMINARIA/5.1 CODIGO CAOLUM01 Panel Led Back Light FOTO 1 DE.jpg",
     alt: "Paneles LED y luminarias técnicas"
   }
 ];
@@ -35,7 +35,7 @@ export const products: Product[] = [
     id: "INSTALACION",
     name: "Instalación de Cielo Americano",
     category: "Cielos Modulares",
-    image: "/src/assets/products/CIELOS MODULARES/3.1 INSTALACION.jpg",
+    image: "/assets/products/CIELOS MODULARES/3.1 INSTALACION.jpg",
     description: "Servicio profesional de instalación de cielos americanos, garantizando un acabado impecable y duradero.",
     isService: true,
     tags: ["Servicio", "Instalación", "Profesional"]
@@ -44,7 +44,7 @@ export const products: Product[] = [
     id: "CAOP01",
     name: "CAOP01 - Palmeta Metálica Acustiplak Acero Perforada 2x2",
     category: "Cielos Modulares",
-    image: "/src/assets/products/CIELOS MODULARES/3.2  CÓDIGO CAOP01 Palmeta Metálica Acustiplak Acero Perforada 2x2 Blanca  Y GRIS Rebaje 916 Y 1516.jpg",
+    image: "/assets/products/CIELOS MODULARES/3.2_CODIGO_CAOP01_Palmeta_Metalica_Acustiplak.jpg",
     description: "Palmeta de acero galvanizado con acabado en pintura en polvo, ideal para espacios que requieren durabilidad y estética.",
     specs: [
       "Fabricado en acero galvanizado de alta resistencia",
@@ -58,7 +58,7 @@ export const products: Product[] = [
     id: "CAOFM01",
     name: "CAOFM01 - Fibra Mineral Granulada",
     category: "Cielos Modulares",
-    image: "/src/assets/products/CIELOS MODULARES/3.3 CÓDIGO CAOFM01  FIBRA MINERAL GRANULADA.png",
+    image: "/assets/products/CIELOS MODULARES/3.3_CODIGO_CAOFM01_Fibra_Mineral_Granulada.png",
     description: "Placa de fibra mineral granulada de 12 mm con acabado liso, perfecta para espacios que requieren acústica y estética.",
     specs: [
       "Material: Fibra mineral granulada",
@@ -72,7 +72,7 @@ export const products: Product[] = [
     id: "CAOFM02",
     name: "CAOFM02 - Fibra Mineral Fisurada",
     category: "Cielos Modulares",
-    image: "/src/assets/products/CIELOS MODULARES/3.4 CODIGO CAOFM02 Fibra MIneral Fisurada.jpg",
+    image: "/assets/products/CIELOS MODULARES/3.4_CODIGO_CAOFM02_Fibra_Mineral_Fisurada.jpg",
     description: "Placa de fibra mineral fisurada con acabado liso, máxima seguridad y resistencia al fuego.",
     specs: [
       "Material: Fibra mineral fisurada",
@@ -86,7 +86,7 @@ export const products: Product[] = [
     id: "CAOP02",
     name: "CAOP02 - PVC Lavable",
     category: "Cielos Modulares",
-    image: "/src/assets/products/CIELOS MODULARES/3.5 CODIGO CAOP02 PCV  LAVABLE.jpg",
+    image: "/assets/products/CIELOS MODULARES/3.5_CODIGO_CAOP02_PCV_LAVABLE.jpg",
     description: "Placa de yeso-cartón con recubrimiento vinílico, máxima durabilidad y resistencia a la humedad.",
     specs: [
       "Modulación: 1,22 x 0,61 m y 0,61 x 0,61 m",
@@ -103,7 +103,7 @@ export const products: Product[] = [
     id: "CAOPER01",
     name: "CAOPER01 - Perfil Principal 15/16 o 9/16",
     category: "Perfilería",
-    image: "/src/assets/products/perfileria/4.1 CODIGO CAOPER01 Principal 1516 o 916 espesor 0,4mm.jpg",
+    image: "/assets/products/perfileria/4.1 CODIGO CAOPER01 Principal 1516 o 916 espesor 0,4mm.jpg",
     description: "Perfil principal para estructura de cielos americanos, disponible en diferentes rebajes",
     specs: [
       "Rebaje: 15/16 o 9/16",
@@ -117,7 +117,7 @@ export const products: Product[] = [
     id: "CAOPER02",
     name: "CAOPER02 - Perfil T Secundario 61 cm",
     category: "Perfilería",
-    image: "/src/assets/products/perfileria/4.2 CODIGO CAOPER02 PERFIL  T SEGUNDARIO 61CM, BLANCO 1516 Y 916.jpg",
+    image: "/assets/products/perfileria/4.2 CODIGO CAOPER02 PERFIL  T SEGUNDARIO 61CM, BLANCO 1516 Y 916.jpg",
     description: "Perfil T secundario de 61 cm para estructura de cielos modulares",
     specs: [
       "Longitud: 61 cm",
@@ -131,7 +131,7 @@ export const products: Product[] = [
     id: "CAOPER03",
     name: "CAOPER03 - Perfil T Secundario 122 cm",
     category: "Perfilería",
-    image: "/src/assets/products/perfileria/4.3 CODIGO CAOPER03 PERFIL  T SEGUNDARIO 12.22CM, BLANCO 1516 Y 916.jpg",
+    image: "/assets/products/perfileria/4.3 CODIGO CAOPER03 PERFIL  T SEGUNDARIO 12.22CM, BLANCO 1516 Y 916.jpg",
     description: "Perfil T secundario de 122 cm para estructuras de mayor envergadura",
     specs: [
       "Longitud: 122 cm",
@@ -145,7 +145,7 @@ export const products: Product[] = [
     id: "CAOPER04",
     name: "CAOPER04 - Ángulo Perimetral 15/16",
     category: "Perfilería",
-    image: "/src/assets/products/perfileria/4.4 CODIGO CAOPER01 Principal 1516 o 916 espesor 0,4mm.jpg",
+    image: "/assets/products/perfileria/4.4 CODIGO CAOPER01 Principal 1516 o 916 espesor 0,4mm.jpg",
     description: "Ángulo perimetral para el borde de cielos americanos, acabado perfecto",
     specs: [
       "Rebaje: 15/16",
@@ -161,7 +161,7 @@ export const products: Product[] = [
     id: "CAOLUM01",
     name: "CAOLUM01 - Panel LED Back Light 40W",
     category: "Luminaria",
-    image: "/src/assets/products/LUMINARIA/5.1 CODIGO CAOLUM01 Panel Led Back Light FOTO 1 DE.jpg",
+    image: "/assets/products/LUMINARIA/5.1 CODIGO CAOLUM01 Panel Led Back Light FOTO 1 DE.jpg",
     description: "Panel LED Back Light de 40W con dimensiones 603x603x12 mm, iluminación eficiente",
     specs: [
       "Potencia: 40W",
@@ -177,7 +177,7 @@ export const products: Product[] = [
     id: "CAOLUM02",
     name: "CAOLUM02 - Panel LED Circular Sobrepuesto XL 36W",
     category: "Luminaria",
-    image: "/src/assets/products/LUMINARIA/5.2   CODIGO CAOLUM02 Panel Led Circular Sobrepuesto Xl 36w D500mm 4500k FOTO 1.jpg",
+    image: "/assets/products/LUMINARIA/5.2_CODIGO_CAOLUM02_Panel_Led_Circular_FOTO1.jpg",
     description: "Panel LED circular sobrepuesto XL de 36W con diámetro 500 mm y temperatura 4500K",
     specs: [
       "Potencia: 36W (opciones: 6W, 12W, 18W)",
@@ -192,7 +192,7 @@ export const products: Product[] = [
     id: "CAOLUM03",
     name: "CAOLUM03 - Panel LED 1213x302x40W",
     category: "Luminaria",
-    image: "/src/assets/products/LUMINARIA/5.3 CODIGO CAOLUM03 Panel Led 1213x302x40w 3500k.jpg",
+    image: "/assets/products/LUMINARIA/5.3 CODIGO CAOLUM03 Panel Led 1213x302x40w 3500k.jpg",
     description: "Panel LED rectangular de 1213x302 mm con potencia de 40W y temperatura 3500K",
     specs: [
       "Dimensiones: 1213 x 302 mm",

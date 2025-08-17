@@ -10,9 +10,9 @@ import { products } from "../data/products";
 import { siteConfig, whatsappQuoteLink } from "../config/siteConfig";
 
 const heroSlides = [
-    { src: "/src/assets/hero/hero-1.png", alt: "Cielo modular en oficina" },
-    { src: "/src/assets/hero/hero-2.jpg", alt: "Tejas de techo modulares" },
-    { src: "/src/assets/hero/hero-3.jpg", alt: "Cielos americanos profesionales" },
+    { src: "/assets/hero/hero-1.png", alt: "Cielo modular en oficina" },
+    { src: "/assets/hero/hero-2.jpg", alt: "Tejas de techo modulares" },
+    { src: "/assets/hero/hero-3.jpg", alt: "Cielos americanos profesionales" },
 ];
 
 export default function Home() {
