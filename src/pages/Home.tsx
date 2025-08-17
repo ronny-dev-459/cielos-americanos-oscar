@@ -1,15 +1,12 @@
-import CategoryCard from "../components/CategoryCard";
-import LogoCloud from "../components/LogoCloud";
+
 import HeroCarousel from "../components/hero/HeroCarousel";
-import BenefitsSection from "../components/BenefitsSection";
-import ProductCard from "../components/ProductCard";
 import FeaturedCarousel from "../components/carousels/FeaturedCarousel";
 import FeatureSplit from "../components/FeatureSplit";
 import CategoriesGrid from "../components/CategoriesGrid";
 import CompanyBlock from "../components/CompanyBlock";
 import HomeSummary from "../components/HomeSummary";
 
-import { products, categoriesWithImages } from "../data/products";
+import { products } from "../data/products";
 import { siteConfig, whatsappQuoteLink } from "../config/siteConfig";
 
 const heroSlides = [

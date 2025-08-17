@@ -40,34 +40,40 @@ export default function Clients() {
             <section className="py-16 bg-background-secondary">
                 <div className="section">
                     <h2 className="text-center mb-12">Testimonio de nuestros clientes</h2>
-                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                        {clientsContent.testimonials.map((testimonial, index) => (
-                            <div key={index} className="card p-6 bg-white reveal">
-                                <p className="text-text-secondary italic mb-6 leading-relaxed">
-                                    "{testimonial.text}"
-                                </p>
-                                <div className="flex items-center gap-4">
-                                    <img
-                                        src={testimonial.logo}
-                                        alt={testimonial.company}
-                                        className="w-16 h-12 object-contain opacity-60"
-                                        loading="lazy"
-                                    />
-                                    <div>
-                                        <div className="font-semibold text-text-primary">
-                                            {testimonial.author}
-                                        </div>
-                                        <div className="text-sm text-text-light">
-                                            {testimonial.position}
-                                        </div>
-                                        <div className="text-sm text-primary-500 font-medium">
-                                            {testimonial.company}
+                    {clientsContent.testimonials.length > 0 ? (
+                        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                            {(clientsContent.testimonials as any[]).map((testimonial, index) => (
+                                <div key={index} className="card p-6 bg-white reveal">
+                                    <p className="text-text-secondary italic mb-6 leading-relaxed">
+                                        "{testimonial.text}"
+                                    </p>
+                                    <div className="flex items-center gap-4">
+                                        <img
+                                            src={testimonial.logo}
+                                            alt={testimonial.company}
+                                            className="w-16 h-12 object-contain opacity-60"
+                                            loading="lazy"
+                                        />
+                                        <div>
+                                            <div className="font-semibold text-text-primary">
+                                                {testimonial.author}
+                                            </div>
+                                            <div className="text-sm text-text-light">
+                                                {testimonial.position}
+                                            </div>
+                                            <div className="text-sm text-primary-500 font-medium">
+                                                {testimonial.company}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="text-center text-text-light py-12">
+                            <p>Testimonios disponibles próximamente</p>
+                        </div>
+                    )}
                 </div>
             </section>
 
