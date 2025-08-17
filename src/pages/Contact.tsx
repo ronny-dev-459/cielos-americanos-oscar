@@ -88,10 +88,10 @@ Origen: Sitio Web (Formulario de Contacto)`;
             // Método 1: window.location.href (más confiable)
             window.location.href = mailtoUrl;
             mailtoOpened = true;
-            
+
         } catch (error) {
             console.error('Error con window.location.href:', error);
-            
+
             try {
                 // Método 2: window.open como fallback
                 const mailtoWindow = window.open(mailtoUrl, '_blank');
@@ -119,8 +119,8 @@ Origen: Sitio Web (Formulario de Contacto)`;
     const handleInputChange = (field: keyof FormData, value: string | boolean) => {
         setFormData(prev => ({ ...prev, [field]: value }));
         // Limpiar error del campo cuando el usuario empiece a escribir
-        if (errors[field]) {
-            setErrors(prev => ({ ...prev, [field]: undefined }));
+        if (errors[field as keyof FormErrors]) {
+            setErrors(prev => ({ ...prev, [field as keyof FormErrors]: undefined }));
         }
     };
 
