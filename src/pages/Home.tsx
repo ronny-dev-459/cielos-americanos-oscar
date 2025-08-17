@@ -20,10 +20,8 @@ const heroSlides = [
 
 export default function Home() {
     const destacados = products.slice(0, 8);
-    const logos = Array.from({ length: 8 }).map((_, i) => ({
-        src: `https://placehold.co/160x60?text=Logo+${i + 1}`,
-        alt: "",
-    }));
+    // Logos de clientes - por ahora vacío hasta que el cliente comparta logos reales
+    const logos: { src: string; alt: string }[] = [];
 
     return (
         <main className="w-full">

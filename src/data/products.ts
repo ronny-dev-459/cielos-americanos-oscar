@@ -14,17 +14,17 @@ export const categories = ["Cielos Modulares", "Perfilería", "Luminaria"];
 export const categoriesWithImages = [
   {
     name: "Cielos Modulares",
-    image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=400&h=300&auto=format&fit=crop",
+    image: "/src/assets/products/CIELOS MODULARES/3.2  CÓDIGO CAOP01 Palmeta Metálica Acustiplak Acero Perforada 2x2 Blanca  Y GRIS Rebaje 916 Y 1516.jpg",
     alt: "Palmetas metálicas y fibra mineral para cielos americanos"
   },
   {
     name: "Perfilería", 
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=400&h=300&auto=format&fit=crop",
+    image: "/src/assets/products/perfileria/4.1 CODIGO CAOPER01 Principal 1516 o 916 espesor 0,4mm.jpg",
     alt: "Perfiles principales y secundarios para estructura"
   },
   {
     name: "Luminaria",
-    image: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?q=80&w=400&h=300&auto=format&fit=crop",
+    image: "/src/assets/products/LUMINARIA/5.1 CODIGO CAOLUM01 Panel Led Back Light FOTO 1 DE.jpg",
     alt: "Paneles LED y luminarias técnicas"
   }
 ];
@@ -32,11 +32,11 @@ export const categoriesWithImages = [
 export const products: Product[] = [
   // ===== CIELOS MODULARES =====
   {
-    id: "instalacion-cielo",
+    id: "INSTALACION",
     name: "Instalación de Cielo Americano",
     category: "Cielos Modulares",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&h=400&auto=format&fit=crop",
-    description: "Servicio profesional de instalación de productos",
+    image: "/src/assets/products/CIELOS MODULARES/3.1 INSTALACION.jpg",
+    description: "Servicio profesional de instalación de cielos americanos, garantizando un acabado impecable y duradero.",
     isService: true,
     tags: ["Servicio", "Instalación", "Profesional"]
   },
@@ -44,114 +44,116 @@ export const products: Product[] = [
     id: "CAOP01",
     name: "CAOP01 - Palmeta Metálica Acustiplak Acero Perforada 2x2",
     category: "Cielos Modulares",
-    image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&h=400&auto=format&fit=crop",
-    description: "Palmeta metálica perforada disponible en blanco y gris, rebaje 9/16 y 15/16",
+    image: "/src/assets/products/CIELOS MODULARES/3.2  CÓDIGO CAOP01 Palmeta Metálica Acustiplak Acero Perforada 2x2 Blanca  Y GRIS Rebaje 916 Y 1516.jpg",
+    description: "Palmeta de acero galvanizado con acabado en pintura en polvo, ideal para espacios que requieren durabilidad y estética.",
     specs: [
       "Fabricado en acero galvanizado de alta resistencia",
-      "Acabado en pintura en polvo para mayor durabilidad",
+      "Acabado en pintura en polvo",
       "Medidas de modulación: 0,61 x 0,61 m",
       "Rebaje: 15/16 y 9/16"
     ],
-    tags: ["Pasillos elegantes", "Oficinas modernas", "Edificios corporativos", "Tiendas comerciales"]
+    tags: ["Pasillos", "Oficinas", "Corporativo", "Tiendas"]
   },
   {
     id: "CAOFM01",
     name: "CAOFM01 - Fibra Mineral Granulada",
     category: "Cielos Modulares",
-    image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=600&h=400&auto=format&fit=crop",
-    description: "Placa de fibra mineral de 12 mm, diseño liso y elegante",
+    image: "/src/assets/products/CIELOS MODULARES/3.3 CÓDIGO CAOFM01  FIBRA MINERAL GRANULADA.png",
+    description: "Placa de fibra mineral granulada de 12 mm con acabado liso, perfecta para espacios que requieren acústica y estética.",
     specs: [
+      "Material: Fibra mineral granulada",
       "Espesor: 12 mm",
-      "Diseño liso sin perforaciones",
-      "Alto rendimiento y acabado estético"
+      "Acabado: Liso",
+      "Aplicación: Oficinas, locales comerciales, educación"
     ],
-    tags: ["Oficinas modernas", "Locales comerciales", "Espacios educativos"]
+    tags: ["Oficinas", "Locales", "Educación", "Acústica"]
   },
   {
     id: "CAOFM02",
     name: "CAOFM02 - Fibra Mineral Fisurada",
     category: "Cielos Modulares",
-    image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=600&h=400&auto=format&fit=crop",
-    description: "Placa de fibra mineral con acabado liso, máxima seguridad",
+    image: "/src/assets/products/CIELOS MODULARES/3.4 CODIGO CAOFM02 Fibra MIneral Fisurada.jpg",
+    description: "Placa de fibra mineral fisurada con acabado liso, máxima seguridad y resistencia al fuego.",
     specs: [
-      "Material: Fibra mineral",
+      "Material: Fibra mineral fisurada",
+      "Espesor: 12 mm",
       "Reacción al fuego: Clase A (máxima seguridad)",
-      "Color: Blanco puro",
-      "Espesor: 12 mm nominal"
+      "Color: Blanco puro"
     ],
-    tags: ["Oficinas modernas", "Locales comerciales", "Instituciones educativas"]
+    tags: ["Seguridad", "Fuego", "Instituciones", "Corporativo"]
   },
   {
     id: "CAOP02",
     name: "CAOP02 - PVC Lavable",
     category: "Cielos Modulares",
-    image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&h=400&auto=format&fit=crop",
-    description: "Placa de yeso-cartón con recubrimiento vinílico, máxima durabilidad",
+    image: "/src/assets/products/CIELOS MODULARES/3.5 CODIGO CAOP02 PCV  LAVABLE.jpg",
+    description: "Placa de yeso-cartón con recubrimiento vinílico, máxima durabilidad y resistencia a la humedad.",
     specs: [
-      "Modulación: 1,22 x 0,61 m | 0,61 x 0,61 m",
+      "Modulación: 1,22 x 0,61 m y 0,61 x 0,61 m",
       "Resistencia a la humedad: RH 99%",
-      "Reflexión de luz: 86% aprox.",
       "Absorción acústica: NRC = 0,65",
-      "Resistencia al fuego: RF65"
+      "Resistencia al fuego: RF65",
+      "Reflexión de luz: 86%"
     ],
-    tags: ["Ambientes exigentes", "Alta durabilidad", "Resistente humedad"]
+    tags: ["Humedad", "Durabilidad", "Lavable", "Alta resistencia"]
   },
 
   // ===== PERFILERÍA =====
   {
     id: "CAOPER01",
-    name: "CAOPER01 - Principal 15/16 o 9/16",
+    name: "CAOPER01 - Perfil Principal 15/16 o 9/16",
     category: "Perfilería",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&h=400&auto=format&fit=crop",
-    description: "Perfil principal de acero galvanizado, espesor 0,4mm",
+    image: "/src/assets/products/perfileria/4.1 CODIGO CAOPER01 Principal 1516 o 916 espesor 0,4mm.jpg",
+    description: "Perfil principal para estructura de cielos americanos, disponible en diferentes rebajes",
     specs: [
-      "Material: acero galvanizado",
-      "Terminado en pintura blanco o negro",
-      "Resistente al fuego RF 120",
-      "Espesor: 0,4mm"
+      "Rebaje: 15/16 o 9/16",
+      "Espesor: 0,4 mm",
+      "Resistencia: RF120",
+      "Opciones: Estándar y antisísmico"
     ],
-    tags: ["Estructura principal", "Resistente al fuego", "Opción antisísmico"]
+    tags: ["Estructura", "Principal", "Resistente", "Antisísmico"]
   },
   {
     id: "CAOPER02",
-    name: "CAOPER02 - Perfil T Secundario 61cm",
+    name: "CAOPER02 - Perfil T Secundario 61 cm",
     category: "Perfilería",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&h=400&auto=format&fit=crop",
-    description: "Perfil secundario 15/16 y 9/16, longitud 610mm",
+    image: "/src/assets/products/perfileria/4.2 CODIGO CAOPER02 PERFIL  T SEGUNDARIO 61CM, BLANCO 1516 Y 916.jpg",
+    description: "Perfil T secundario de 61 cm para estructura de cielos modulares",
     specs: [
-      "Longitud: 610 mm",
-      "Espesor: 0,4mm",
-      "Material: acero galvanizado",
-      "Resistente al fuego RF 120"
+      "Longitud: 61 cm",
+      "Espesor: 0,4 mm",
+      "Resistencia: RF120",
+      "Opciones: Estándar y antisísmico"
     ],
-    tags: ["Perfil secundario", "Resistente al fuego", "Opción antisísmico"]
+    tags: ["Secundario", "61 cm", "Estructura", "Modular"]
   },
   {
     id: "CAOPER03",
-    name: "CAOPER03 - Perfil T Secundario 122cm",
+    name: "CAOPER03 - Perfil T Secundario 122 cm",
     category: "Perfilería",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&h=400&auto=format&fit=crop",
-    description: "Perfil secundario 15/16 y 9/16, longitud 1220mm",
+    image: "/src/assets/products/perfileria/4.3 CODIGO CAOPER03 PERFIL  T SEGUNDARIO 12.22CM, BLANCO 1516 Y 916.jpg",
+    description: "Perfil T secundario de 122 cm para estructuras de mayor envergadura",
     specs: [
-      "Longitud: 1220 mm",
-      "Espesor: 0,4mm",
-      "Material: acero galvanizado",
-      "Resistente al fuego RF 120"
+      "Longitud: 122 cm",
+      "Espesor: 0,4 mm",
+      "Resistencia: RF120",
+      "Opciones: Estándar y antisísmico"
     ],
-    tags: ["Perfil secundario", "Resistente al fuego", "Opción antisísmico"]
+    tags: ["Secundario", "122 cm", "Estructura", "Gran formato"]
   },
   {
     id: "CAOPER04",
     name: "CAOPER04 - Ángulo Perimetral 15/16",
     category: "Perfilería",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&h=400&auto=format&fit=crop",
-    description: "Ángulo perimetral de acero galvanizado",
+    image: "/src/assets/products/perfileria/4.4 CODIGO CAOPER01 Principal 1516 o 916 espesor 0,4mm.jpg",
+    description: "Ángulo perimetral para el borde de cielos americanos, acabado perfecto",
     specs: [
-      "Material: acero galvanizado",
-      "Terminado en pintura blanco y negro",
-      "Resistente al fuego RF 120"
+      "Rebaje: 15/16",
+      "Espesor: 0,4 mm",
+      "Resistencia: RF120",
+      "Opciones: Estándar y antisísmico"
     ],
-    tags: ["Ángulo perimetral", "Resistente al fuego", "Opción antisísmico"]
+    tags: ["Perimetral", "Borde", "Acabado", "Terminación"]
   },
 
   // ===== LUMINARIA =====
@@ -159,47 +161,46 @@ export const products: Product[] = [
     id: "CAOLUM01",
     name: "CAOLUM01 - Panel LED Back Light 40W",
     category: "Luminaria",
-    image: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?q=80&w=600&h=400&auto=format&fit=crop",
-    description: "Panel LED de alto rendimiento 603×603×12 mm",
+    image: "/src/assets/products/LUMINARIA/5.1 CODIGO CAOLUM01 Panel Led Back Light FOTO 1 DE.jpg",
+    description: "Panel LED Back Light de 40W con dimensiones 603x603x12 mm, iluminación eficiente",
     specs: [
-      "Potencia: 40 W",
-      "Voltaje: AC100 – 240V, 50 Hz",
-      "Tipo LED: SMD 2835 (180 LEDs)",
-      "Flujo luminoso: 3.600 lm",
-      "Factor de potencia: 0,96",
+      "Potencia: 40W",
+      "Tecnología: SMD2835",
+      "Flujo luminoso: 3600 lm",
+      "Factor de potencia: PF 0,96",
       "Protección: IP40",
-      "Dimensiones: 603 x 603 x 12 mm",
-      "Temperatura color: 3500K · 4500K · 6500K"
+      "Temperatura de color: 3500/4500/6500 K"
     ],
-    tags: ["Oficinas", "Comercios", "Centros salud", "Espacios educativos"]
+    tags: ["LED", "Panel", "Back Light", "Eficiente"]
   },
   {
     id: "CAOLUM02",
     name: "CAOLUM02 - Panel LED Circular Sobrepuesto XL 36W",
     category: "Luminaria",
-    image: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?q=80&w=600&h=400&auto=format&fit=crop",
-    description: "Panel LED circular D:500mm 4500K, múltiples opciones",
+    image: "/src/assets/products/LUMINARIA/5.2   CODIGO CAOLUM02 Panel Led Circular Sobrepuesto Xl 36w D500mm 4500k FOTO 1.jpg",
+    description: "Panel LED circular sobrepuesto XL de 36W con diámetro 500 mm y temperatura 4500K",
     specs: [
-      "36W | 220V | D:500mm | 4500K",
-      "Opciones: 6W (540 lm), 12W (1080 lm), 18W (1620 lm)",
+      "Potencia: 36W (opciones: 6W, 12W, 18W)",
+      "Diámetro: 500 mm",
+      "Temperatura: 4500K",
       "Factor de potencia: 0,9",
-      "Alta eficiencia energética"
+      "Aplicación: Cielos modulares"
     ],
-    tags: ["Espacios amplios", "Diseño minimalista", "Cielos modulares"]
+    tags: ["Circular", "Sobrepuesto", "XL", "Modular"]
   },
   {
     id: "CAOLUM03",
-    name: "CAOLUM03 - Panel LED 1213×302×40W 3500K",
+    name: "CAOLUM03 - Panel LED 1213x302x40W",
     category: "Luminaria",
-    image: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?q=80&w=600&h=400&auto=format&fit=crop",
-    description: "Panel LED rectangular para espacios amplios (por confirmar specs exactas)",
+    image: "/src/assets/products/LUMINARIA/5.3 CODIGO CAOLUM03 Panel Led 1213x302x40w 3500k.jpg",
+    description: "Panel LED rectangular de 1213x302 mm con potencia de 40W y temperatura 3500K",
     specs: [
-      "Medidas: 1213 x 603 mm (por confirmar)",
-      "Potencia: 72 W (por confirmar vs 40W)",
-      "Voltaje: 220 V",
-      "Flujo luminoso: 6.400 lm",
-      "Factor de potencia: 0,9"
+      "Dimensiones: 1213 x 302 mm",
+      "Potencia: 40W",
+      "Temperatura: 3500K",
+      "Aplicación: Cielos modulares",
+      "Nota: También disponible 1213x603 72W (por confirmar)"
     ],
-    tags: ["Comercios", "Oficinas", "Centros salud", "Espacios amplios", "Por confirmar"]
+    tags: ["Rectangular", "40W", "3500K", "Modular"]
   }
 ];

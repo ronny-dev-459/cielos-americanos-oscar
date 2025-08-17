@@ -3,25 +3,25 @@ import { Link } from "react-router-dom";
 const categories = [
     {
         name: "Cielos Modulares",
-        image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&auto=format&fit=crop",
+        image: "/src/assets/products/CIELOS MODULARES/3.2  CÓDIGO CAOP01 Palmeta Metálica Acustiplak Acero Perforada 2x2 Blanca  Y GRIS Rebaje 916 Y 1516.jpg",
         link: "/productos?cat=Cielos%20Modulares",
         description: "Palmetas metálicas y fibra mineral"
     },
     {
         name: "Perfilería",
-        image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop",
+        image: "/src/assets/products/perfileria/4.1 CODIGO CAOPER01 Principal 1516 o 916 espesor 0,4mm.jpg",
         link: "/productos?cat=Perfilería",
         description: "Perfiles principales y secundarios"
     },
     {
         name: "Luminaria",
-        image: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?q=80&w=600&auto=format&fit=crop",
+        image: "/src/assets/products/LUMINARIA/5.1 CODIGO CAOLUM01 Panel Led Back Light FOTO 1 DE.jpg",
         link: "/productos?cat=Luminaria",
         description: "Paneles LED y luminarias técnicas"
     },
     {
         name: "Obras",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop",
+        image: "/src/assets/obras/obras_1.png",
         link: "/obras",
         description: "Proyectos ejecutados"
     }

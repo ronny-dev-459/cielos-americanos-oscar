@@ -37,7 +37,7 @@ export const siteConfig = {
       description:
         "Trabajamos con estándares exigentes para asegurar durabilidad, acústica y un acabado limpio en cada proyecto.",
       image:
-        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop",
+        "/src/assets/products/CIELOS MODULARES/3.3 CÓDIGO CAOFM01  FIBRA MINERAL GRANULADA.png",
       reverse: false,
     },
     {
@@ -46,7 +46,7 @@ export const siteConfig = {
       description:
         "Nuestro equipo técnico ejecuta la instalación completa, pruebas y ajustes finales. Obra limpia, en el tiempo comprometido.",
       image:
-        "https://images.unsplash.com/photo-1591453089933-9f2d01d8a6f5?q=80&w=1200&auto=format&fit=crop",
+        "/src/assets/products/CIELOS MODULARES/3.1 INSTALACION.jpg",
       reverse: true,
     },
     {
@@ -55,7 +55,7 @@ export const siteConfig = {
       description:
         "Resolvemos dudas y preparamos tu cotización al instante. Acompañamiento desde el primer contacto hasta la entrega.",
       image:
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=1200&auto=format&fit=crop",
+        "/src/assets/products/LUMINARIA/5.2   CODIGO CAOLUM02 Panel Led Circular Sobrepuesto Xl 36w D500mm 4500k FOTO 1.jpg",
       reverse: false,
     },
   ],
@@ -155,7 +155,7 @@ export const siteConfig = {
     // ----- Contacto -----
     contact: {
       title: "Contacto",
-      subtitle: "Escríbenos y cotiza tu proyecto",
+      subtitle: "Escríbenos y te respondemos en minutos",
       info: {
         address: "Santiago, Chile",
         phone: "+56 9 3330 4442",
@@ -163,21 +163,31 @@ export const siteConfig = {
         hours: "Lunes a Viernes: 9:00 – 18:00 hrs",
       },
       form: {
-        nameLabel: "Nombre",
-        emailLabel: "Email",
-        messageLabel: "Mensaje",
+        nameLabel: "Nombre completo *",
+        emailLabel: "Correo electrónico *",
+        phoneLabel: "Teléfono (opcional)",
+        messageLabel: "Mensaje *",
         namePlaceholder: "Tu nombre completo",
         emailPlaceholder: "tu@correo.com",
-        messagePlaceholder:
-          "Cuéntanos el tipo de proyecto, metros aproximados y fechas estimadas",
-        submitText: "Enviar consulta",
-        submitDemo: "Enviar (demo)",
+        phonePlaceholder: "+56 9 ...",
+        messagePlaceholder: "Cuéntanos tu requerimiento (tipo de proyecto, medidas, fechas)",
+        submitText: "Enviar correo",
+        privacyText: "Acepto que mis datos sean utilizados para responder mi consulta",
+        validation: {
+          nameRequired: "El nombre es requerido",
+          emailRequired: "El correo es requerido",
+          emailInvalid: "Formato de correo inválido",
+          messageRequired: "El mensaje es requerido",
+          messageTooShort: "El mensaje debe tener al menos 15 caracteres",
+          privacyRequired: "Debes aceptar el uso de datos"
+        }
       },
       cta: {
-        title: "¿Prefieres hablar por WhatsApp?",
+        title: "¿Prefieres WhatsApp?",
         subtitle: "Te respondemos en minutos",
         buttonText: "Escribir por WhatsApp",
         hours: "Horario laboral: Lun–Vie 9:00–18:00",
+        fallbackText: "Si el correo no se abre, escríbenos por WhatsApp"
       },
     },
 
