@@ -74,7 +74,7 @@ export const siteConfig = {
       subtitle:
         "Envíanos tu requerimiento y te asesoramos con la mejor solución en cielos, perfilería y luminaria.",
       buttonText: "💬 Cotizar por WhatsApp",
-      footerText: "📱 Respuesta rápida • ⏰ Lun–Vie 9:00–18:00",
+      footerText: "📱 Respuesta rápida • ⏰ Lun–Sab 9:00–18:00",
     },
     final: {
       title: "¿Listo para comenzar tu proyecto?",
@@ -90,13 +90,18 @@ export const siteConfig = {
   socialProof: {
     kicker: "RESPALDO REAL",
     title: "Décadas de proyectos ejecutados con éxito",
-    testimonial: {
-      text:
-        "La instalación fue impecable y cumplieron los plazos. Volveríamos a trabajar con ellos sin dudar.",
-      author: "Nombre Cliente",
-      position: "Cargo",
-      company: "Empresa",
-    },
+    testimonials: [
+      {
+        text:
+          "Quedé muy satisfecho con el trabajo de Cielo Americano Oscar. Desde el primer contacto fueron muy profesionales, puntuales y claros con cada detalle del proyecto. La instalación del cielo americano quedó impecable  y en el tiempo acordado. Además, siempre estuvieron atentos a nuestras dudas y entregaron un servicio de excelente calidad. Sin duda los recomiendo y volvería a trabajar con ellos.",
+        company: "Rimac Ingeniería ltda ",
+      },
+      {
+        text:
+          "Trabajar con Cielo Americano Oscar fue una gran experiencia. El equipo demostró responsabilidad, compromiso y un alto nivel de calidad en la instalación. Todo quedó mejor de lo que esperábamos, con un acabado prolijo y muy profesional. Además, cumplieron con los plazos y siempre estuvieron dispuestos a responder nuestras consultas. 100% recomendados por su excelente servicio.",
+        company: "Consultores Fiorino.Saavedra",
+      },
+    ],
     // TODO: reemplazar por testimonios reales o logos cuando el cliente los comparta
   },
 
@@ -160,7 +165,7 @@ export const siteConfig = {
         address: "Santiago, Chile",
         phone: "+56 9 3330 4442",
         email: "ventas.cieloscar@gmail.com",
-        hours: "Lunes a Viernes: 9:00 – 18:00 hrs",
+        hours: "Lunes a Sábado: 9:00 – 18:00 hrs",
       },
       form: {
         nameLabel: "Nombre completo *",
@@ -186,7 +191,7 @@ export const siteConfig = {
         title: "¿Prefieres WhatsApp?",
         subtitle: "Te respondemos en minutos",
         buttonText: "Escribir por WhatsApp",
-        hours: "Horario laboral: Lun–Vie 9:00–18:00",
+        hours: "Horario laboral: Lun–Sab 9:00–18:00",
         fallbackText: "Si el correo no se abre, escríbenos por WhatsApp"
       },
     },

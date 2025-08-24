@@ -1,6 +1,7 @@
 
 import HeroCarousel from "../components/hero/HeroCarousel";
 import FeaturedCarousel from "../components/carousels/FeaturedCarousel";
+import TestimonialsCarousel from "../components/carousels/TestimonialsCarousel";
 import FeatureSplit from "../components/FeatureSplit";
 import CategoriesGrid from "../components/CategoriesGrid";
 import CompanyBlock from "../components/CompanyBlock";
@@ -107,8 +108,8 @@ export default function Home() {
                     >
                         {siteConfig.cta.primary.buttonText}
                     </a>
-                    <div className="text-sm text-white/80 mt-6">
-                        <p>{siteConfig.cta.primary.footerText}</p>
+                    <div className="text-sm mt-6">
+                        <p className="text-white">{siteConfig.cta.primary.footerText}</p>
                     </div>
                 </div>
             </section>
@@ -129,14 +130,7 @@ export default function Home() {
                             />
                         ))}
                     </div>
-                    <div className="max-w-2xl mx-auto">
-                        <p className="text-lg text-slate-600 italic">
-                            "{siteConfig.socialProof.testimonial.text}"
-                        </p>
-                        <p className="mt-3 text-sm text-slate-500">
-                            — {siteConfig.socialProof.testimonial.author}, {siteConfig.socialProof.testimonial.position}, {siteConfig.socialProof.testimonial.company}
-                        </p>
-                    </div>
+                    <TestimonialsCarousel testimonials={siteConfig.socialProof.testimonials} delay={6000} />
                 </div>
             </section>
 

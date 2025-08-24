@@ -99,7 +99,7 @@ export default function HomeSummary() {
                             <span className="animate-pulse">🚀</span>
                         </a>
                         <p className="text-sm text-white/80 mt-4 font-medium">
-                            Respuesta garantizada en menos de 1 hora • Lun-Vie 9:00-18:00
+                            Respuesta garantizada en menos de 1 hora • Lun-Sab 9:00-18:00
                         </p>
                     </div>
                 </div>

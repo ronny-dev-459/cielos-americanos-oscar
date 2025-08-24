@@ -21,7 +21,7 @@ export default function DesktopCTA() {
                     Cotizar por WhatsApp
                 </a>
                 <p className="text-xs text-slate-500 mt-3">
-                    Horario: Lun-Vie 9:00-18:00
+                    Horario: Lun-Sab 9:00-18:00
                 </p>
             </div>
         </div>
