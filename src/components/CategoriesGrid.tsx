@@ -3,25 +3,25 @@ import { Link } from "react-router-dom";
 const categories = [
     {
         name: "Cielos Modulares",
-        image: "/assets/products/CIELOS MODULARES/3.2_CODIGO_CAOP01_Palmeta_Metalica_Acustiplak.jpg",
+        image: "/assets/products/CIELOS MODULARES/3.2_CODIGO_CAOP01_Palmeta_Metalica_Acustiplak.webp",
         link: "/productos?cat=Cielos%20Modulares",
         description: "Palmetas metálicas y fibra mineral"
     },
     {
         name: "Perfilería",
-        image: "/assets/products/perfileria/4.1 CODIGO CAOPER01 Principal 1516 o 916 espesor 0,4mm.jpg",
+        image: "/assets/products/perfileria/4.1 CODIGO CAOPER01 Principal 1516 o 916 espesor 0,4mm.webp",
         link: "/productos?cat=Perfilería",
         description: "Perfiles principales y secundarios"
     },
     {
         name: "Luminaria",
-        image: "/assets/products/LUMINARIA/5.1 CODIGO CAOLUM01 Panel Led Back Light FOTO 1 DE.jpg",
+        image: "/assets/products/LUMINARIA/5.1_CODIGO_CAOLUM01_Panel_Led_Back_Light_FOTO1.webp",
         link: "/productos?cat=Luminaria",
         description: "Paneles LED y luminarias técnicas"
     },
     {
         name: "Obras",
-        image: "/assets/obras/obras_1.png",
+        image: "/assets/obras/obras_1.webp",
         link: "/obras",
         description: "Proyectos ejecutados"
     }

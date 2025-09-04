@@ -7,7 +7,7 @@ export default function Hero() {
             <div
                 className="absolute inset-0 bg-center bg-cover"
                 style={{
-                    backgroundImage: "url('/assets/office-ceilings-Melbourne.png')",
+                    backgroundImage: "url('/assets/office-ceilings-Melbourne.webp')",
                     backgroundAttachment: typeof window !== 'undefined' && window.innerWidth >= 768 ? "fixed" : "scroll",
                 }}
             />

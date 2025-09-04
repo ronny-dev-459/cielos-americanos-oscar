@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SEO from "../components/SEO";
 import { siteConfig, whatsappQuoteLink } from "../config/siteConfig";
 
 type FormData = {
@@ -125,199 +126,207 @@ Origen: Sitio Web (Formulario de Contacto)`;
     };
 
     return (
-        <div className="w-full">
-            {/* Hero interno */}
-            <section className="bg-gradient-to-br from-background-secondary to-white py-16">
-                <div className="section text-center">
-                    <h1 className="mb-4">{contactContent.title}</h1>
-                    <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-                        {contactContent.subtitle}
-                    </p>
-                </div>
-            </section>
+        <>
+            <SEO
+                title="Contacto - Cotiza tu Proyecto de Cielos Americanos | Cielos Americanos Oscar"
+                description="Contáctanos para cotizar tu proyecto de cielos americanos. WhatsApp rápido, formulario de contacto y atención personalizada en Santiago, Chile."
+                canonical="https://cieloamericanooscar.cl/contacto"
+                keywords="contacto cielos americanos, cotizar proyecto, whatsapp instalación, formulario contacto, atención personalizada"
+            />
+            <div className="w-full">
+                {/* Hero interno */}
+                <section className="bg-gradient-to-br from-background-secondary to-white py-16">
+                    <div className="section text-center">
+                        <h1 className="mb-4">{contactContent.title}</h1>
+                        <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+                            {contactContent.subtitle}
+                        </p>
+                    </div>
+                </section>
 
-            <main className="section">
+                <main className="section">
 
-                <div className="grid gap-8 md:grid-cols-2 mt-8">
-                    <form onSubmit={handleSubmit} className="card">
-                        <div className="card-body p-6">
-                            <h3 className="text-xl font-semibold mb-4 text-text-primary">Envíanos un mensaje</h3>
+                    <div className="grid gap-8 md:grid-cols-2 mt-8">
+                        <form onSubmit={handleSubmit} className="card">
+                            <div className="card-body p-6">
+                                <h3 className="text-xl font-semibold mb-4 text-text-primary">Envíanos un mensaje</h3>
 
-                            {/* Mensaje de éxito */}
-                            {showSuccess && (
-                                <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-                                    <p className="text-green-800 text-sm mb-3">
-                                        ✅ Se abrió tu aplicación de correo. Si necesitas respuesta inmediata, escríbenos por WhatsApp.
-                                    </p>
+                                {/* Mensaje de éxito */}
+                                {showSuccess && (
+                                    <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                                        <p className="text-green-800 text-sm mb-3">
+                                            ✅ Se abrió tu aplicación de correo. Si necesitas respuesta inmediata, escríbenos por WhatsApp.
+                                        </p>
 
-                                    {/* Botón de fallback si el correo no se abre */}
-                                    <div className="text-center">
-                                        <button
-                                            onClick={() => {
-                                                // Copiar información del correo al portapapeles
-                                                const emailInfo = `Para: ${contactContent.info.email}
+                                        {/* Botón de fallback si el correo no se abre */}
+                                        <div className="text-center">
+                                            <button
+                                                onClick={() => {
+                                                    // Copiar información del correo al portapapeles
+                                                    const emailInfo = `Para: ${contactContent.info.email}
 Asunto: Consulta desde la web - ${formData.name}
 Cuerpo: ${formData.message}`;
 
-                                                navigator.clipboard.writeText(emailInfo).then(() => {
-                                                    alert('Información del correo copiada al portapapeles. Puedes pegarla en tu cliente de correo.');
-                                                });
-                                            }}
-                                            className="text-xs bg-blue-100 text-blue-800 px-3 py-1 rounded hover:bg-blue-200 transition-colors"
-                                        >
-                                            📋 Copiar información del correo
-                                        </button>
+                                                    navigator.clipboard.writeText(emailInfo).then(() => {
+                                                        alert('Información del correo copiada al portapapeles. Puedes pegarla en tu cliente de correo.');
+                                                    });
+                                                }}
+                                                className="text-xs bg-blue-100 text-blue-800 px-3 py-1 rounded hover:bg-blue-200 transition-colors"
+                                            >
+                                                📋 Copiar información del correo
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                            )}
-
-                            <div className="grid gap-4">
-                                {/* Campo Nombre */}
-                                <label className="grid gap-1">
-                                    <span className="text-sm text-text-secondary">{contactContent.form.nameLabel}</span>
-                                    <input
-                                        type="text"
-                                        value={formData.name}
-                                        onChange={(e) => handleInputChange('name', e.target.value)}
-                                        className={`border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-primary-500 ${errors.name ? 'border-red-300' : 'border-gray-300'
-                                            }`}
-                                        placeholder={contactContent.form.namePlaceholder}
-                                        aria-label="Nombre completo"
-                                    />
-                                    {errors.name && (
-                                        <span className="text-red-500 text-xs">{errors.name}</span>
-                                    )}
-                                </label>
-
-                                {/* Campo Email */}
-                                <label className="grid gap-1">
-                                    <span className="text-sm text-text-secondary">{contactContent.form.emailLabel}</span>
-                                    <input
-                                        type="email"
-                                        value={formData.email}
-                                        onChange={(e) => handleInputChange('email', e.target.value)}
-                                        className={`border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-primary-500 ${errors.email ? 'border-red-300' : 'border-gray-300'
-                                            }`}
-                                        placeholder={contactContent.form.emailPlaceholder}
-                                        aria-label="Correo electrónico"
-                                    />
-                                    {errors.email && (
-                                        <span className="text-red-500 text-xs">{errors.email}</span>
-                                    )}
-                                </label>
-
-                                {/* Campo Teléfono (opcional) */}
-                                <label className="grid gap-1">
-                                    <span className="text-sm text-text-secondary">{contactContent.form.phoneLabel}</span>
-                                    <input
-                                        type="tel"
-                                        value={formData.phone}
-                                        onChange={(e) => handleInputChange('phone', e.target.value)}
-                                        className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-primary-500"
-                                        placeholder={contactContent.form.phonePlaceholder}
-                                        aria-label="Teléfono (opcional)"
-                                    />
-                                </label>
-
-                                {/* Campo Mensaje */}
-                                <label className="grid gap-1">
-                                    <span className="text-sm text-text-secondary">{contactContent.form.messageLabel}</span>
-                                    <textarea
-                                        value={formData.message}
-                                        onChange={(e) => handleInputChange('message', e.target.value)}
-                                        className={`border rounded-md px-3 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-primary-500 ${errors.message ? 'border-red-300' : 'border-gray-300'
-                                            }`}
-                                        placeholder={contactContent.form.messagePlaceholder}
-                                        aria-label="Mensaje"
-                                    />
-                                    {errors.message && (
-                                        <span className="text-red-500 text-xs">{errors.message}</span>
-                                    )}
-                                </label>
-
-                                {/* Checkbox de Privacidad */}
-                                <label className="flex items-start gap-3">
-                                    <input
-                                        type="checkbox"
-                                        checked={formData.privacy}
-                                        onChange={(e) => handleInputChange('privacy', e.target.checked)}
-                                        className="mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
-                                    />
-                                    <span className="text-sm text-text-secondary">{contactContent.form.privacyText}</span>
-                                </label>
-                                {errors.privacy && (
-                                    <span className="text-red-500 text-xs ml-7">{errors.privacy}</span>
                                 )}
 
-                                {/* Botón Enviar */}
-                                <button
-                                    type="submit"
-                                    className="btn btn-primary w-full"
-                                    aria-label="Enviar correo electrónico"
-                                >
-                                    📧 {contactContent.form.submitText}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                                <div className="grid gap-4">
+                                    {/* Campo Nombre */}
+                                    <label className="grid gap-1">
+                                        <span className="text-sm text-text-secondary">{contactContent.form.nameLabel}</span>
+                                        <input
+                                            type="text"
+                                            value={formData.name}
+                                            onChange={(e) => handleInputChange('name', e.target.value)}
+                                            className={`border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-primary-500 ${errors.name ? 'border-red-300' : 'border-gray-300'
+                                                }`}
+                                            placeholder={contactContent.form.namePlaceholder}
+                                            aria-label="Nombre completo"
+                                        />
+                                        {errors.name && (
+                                            <span className="text-red-500 text-xs">{errors.name}</span>
+                                        )}
+                                    </label>
 
-                    <aside className="space-y-6">
-                        <div className="card">
-                            <div className="card-body p-6">
-                                <h3 className="text-lg font-semibold mb-4 text-text-primary">Información de contacto</h3>
-                                <div className="space-y-3">
-                                    <p className="text-sm text-text-secondary">
-                                        <strong>Dirección:</strong> {contactContent.info.address}
-                                    </p>
-                                    <p className="text-sm text-text-secondary">
-                                        <strong>Teléfono:</strong> {contactContent.info.phone}
-                                    </p>
-                                    <p className="text-sm text-text-secondary">
-                                        <strong>Correo:</strong> {contactContent.info.email}
-                                    </p>
-                                    <p className="text-sm text-text-secondary">
-                                        <strong>Horarios:</strong> {contactContent.info.hours}
-                                    </p>
+                                    {/* Campo Email */}
+                                    <label className="grid gap-1">
+                                        <span className="text-sm text-text-secondary">{contactContent.form.emailLabel}</span>
+                                        <input
+                                            type="email"
+                                            value={formData.email}
+                                            onChange={(e) => handleInputChange('email', e.target.value)}
+                                            className={`border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-primary-500 ${errors.email ? 'border-red-300' : 'border-gray-300'
+                                                }`}
+                                            placeholder={contactContent.form.emailPlaceholder}
+                                            aria-label="Correo electrónico"
+                                        />
+                                        {errors.email && (
+                                            <span className="text-red-500 text-xs">{errors.email}</span>
+                                        )}
+                                    </label>
+
+                                    {/* Campo Teléfono (opcional) */}
+                                    <label className="grid gap-1">
+                                        <span className="text-sm text-text-secondary">{contactContent.form.phoneLabel}</span>
+                                        <input
+                                            type="tel"
+                                            value={formData.phone}
+                                            onChange={(e) => handleInputChange('phone', e.target.value)}
+                                            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-primary-500"
+                                            placeholder={contactContent.form.phonePlaceholder}
+                                            aria-label="Teléfono (opcional)"
+                                        />
+                                    </label>
+
+                                    {/* Campo Mensaje */}
+                                    <label className="grid gap-1">
+                                        <span className="text-sm text-text-secondary">{contactContent.form.messageLabel}</span>
+                                        <textarea
+                                            value={formData.message}
+                                            onChange={(e) => handleInputChange('message', e.target.value)}
+                                            className={`border rounded-md px-3 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-primary-500 ${errors.message ? 'border-red-300' : 'border-gray-300'
+                                                }`}
+                                            placeholder={contactContent.form.messagePlaceholder}
+                                            aria-label="Mensaje"
+                                        />
+                                        {errors.message && (
+                                            <span className="text-red-500 text-xs">{errors.message}</span>
+                                        )}
+                                    </label>
+
+                                    {/* Checkbox de Privacidad */}
+                                    <label className="flex items-start gap-3">
+                                        <input
+                                            type="checkbox"
+                                            checked={formData.privacy}
+                                            onChange={(e) => handleInputChange('privacy', e.target.checked)}
+                                            className="mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+                                        />
+                                        <span className="text-sm text-text-secondary">{contactContent.form.privacyText}</span>
+                                    </label>
+                                    {errors.privacy && (
+                                        <span className="text-red-500 text-xs ml-7">{errors.privacy}</span>
+                                    )}
+
+                                    {/* Botón Enviar */}
+                                    <button
+                                        type="submit"
+                                        className="btn btn-primary w-full"
+                                        aria-label="Enviar correo electrónico"
+                                    >
+                                        📧 {contactContent.form.submitText}
+                                    </button>
                                 </div>
                             </div>
-                        </div>
+                        </form>
 
-                        <div className="card bg-gradient-to-br from-primary-50 to-white border-primary-100">
-                            <div className="card-body p-6">
-                                <h3 className="text-lg font-semibold mb-2 text-text-primary">
-                                    {contactContent.cta.title}
-                                </h3>
-                                <p className="text-sm text-text-secondary mb-4">
-                                    {contactContent.cta.subtitle}
-                                </p>
-
-                                {/* WhatsApp con nombre del formulario si está disponible */}
-                                <a
-                                    href={whatsappQuoteLink(formData.name ? `Hola, soy ${formData.name} y quiero cotizar mi proyecto de cielos americanos` : undefined)}
-                                    className="btn btn-primary w-full mb-3"
-                                >
-                                    💬 {contactContent.cta.buttonText}
-                                </a>
-
-                                <p className="text-xs text-text-light mt-2 text-center">
-                                    {contactContent.cta.hours}
-                                </p>
-
-                                {/* Información adicional */}
-                                <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                                    <p className="text-blue-800 text-xs text-center mb-2">
-                                        💡 {contactContent.cta.fallbackText}
-                                    </p>
-                                    <p className="text-blue-700 text-xs text-center font-medium">
-                                        📱 Respuesta garantizada en menos de 1 hora
-                                    </p>
+                        <aside className="space-y-6">
+                            <div className="card">
+                                <div className="card-body p-6">
+                                    <h3 className="text-lg font-semibold mb-4 text-text-primary">Información de contacto</h3>
+                                    <div className="space-y-3">
+                                        <p className="text-sm text-text-secondary">
+                                            <strong>Dirección:</strong> {contactContent.info.address}
+                                        </p>
+                                        <p className="text-sm text-text-secondary">
+                                            <strong>Teléfono:</strong> {contactContent.info.phone}
+                                        </p>
+                                        <p className="text-sm text-text-secondary">
+                                            <strong>Correo:</strong> {contactContent.info.email}
+                                        </p>
+                                        <p className="text-sm text-text-secondary">
+                                            <strong>Horarios:</strong> {contactContent.info.hours}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </aside>
-                </div>
-            </main>
-        </div>
+
+                            <div className="card bg-gradient-to-br from-primary-50 to-white border-primary-100">
+                                <div className="card-body p-6">
+                                    <h3 className="text-lg font-semibold mb-2 text-text-primary">
+                                        {contactContent.cta.title}
+                                    </h3>
+                                    <p className="text-sm text-text-secondary mb-4">
+                                        {contactContent.cta.subtitle}
+                                    </p>
+
+                                    {/* WhatsApp con nombre del formulario si está disponible */}
+                                    <a
+                                        href={whatsappQuoteLink(formData.name ? `Hola, soy ${formData.name} y quiero cotizar mi proyecto de cielos americanos` : undefined)}
+                                        className="btn btn-primary w-full mb-3"
+                                    >
+                                        💬 {contactContent.cta.buttonText}
+                                    </a>
+
+                                    <p className="text-xs text-text-light mt-2 text-center">
+                                        {contactContent.cta.hours}
+                                    </p>
+
+                                    {/* Información adicional */}
+                                    <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                                        <p className="text-blue-800 text-xs text-center mb-2">
+                                            💡 {contactContent.cta.fallbackText}
+                                        </p>
+                                        <p className="text-blue-700 text-xs text-center font-medium">
+                                            📱 Respuesta garantizada en menos de 1 hora
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </main>
+            </div>
+        </>
     );
 }
 

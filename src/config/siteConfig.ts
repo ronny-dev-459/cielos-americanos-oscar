@@ -37,7 +37,7 @@ export const siteConfig = {
       description:
         "Trabajamos con estándares exigentes para asegurar durabilidad, acústica y un acabado limpio en cada proyecto.",
       image:
-        "/assets/products/CIELOS MODULARES/3.3_CODIGO_CAOFM01_Fibra_Mineral_Granulada.png",
+        "/assets/products/CIELOS MODULARES/3.3_CODIGO_CAOFM01_Fibra_Mineral_Granulada.webp",
       reverse: false,
     },
     {
@@ -46,7 +46,7 @@ export const siteConfig = {
       description:
         "Nuestro equipo técnico ejecuta la instalación completa, pruebas y ajustes finales. Obra limpia, en el tiempo comprometido.",
       image:
-        "/assets/products/CIELOS MODULARES/3.1 INSTALACION.jpg",
+        "/assets/products/CIELOS MODULARES/3.1 INSTALACION.webp",
       reverse: true,
     },
     {
@@ -55,7 +55,7 @@ export const siteConfig = {
       description:
         "Resolvemos dudas y preparamos tu cotización al instante. Acompañamiento desde el primer contacto hasta la entrega.",
       image:
-        "/assets/products/LUMINARIA/5.2_CODIGO_CAOLUM02_Panel_Led_Circular_FOTO1.jpg",
+        "/assets/products/LUMINARIA/5.2_CODIGO_CAOLUM02_Panel_Led_Circular_FOTO1.webp",
       reverse: false,
     },
   ],
